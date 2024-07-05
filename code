@@ -1,6 +1,5 @@
 #include <Servo.h>
 
-// Define the servos
 Servo servo1;
 Servo servo2;
 Servo servo3;
@@ -9,21 +8,20 @@ Servo servo5;
 Servo servo6;
 
 void setup() {
-  // Attach servos to pins
-  servo1.attach(3);  // Pin 3
-  servo2.attach(5);  // Pin 5
-  servo3.attach(6);  // Pin 6
-  servo4.attach(9);  // Pin 9
-  servo5.attach(10); // Pin 10
-  servo6.attach(11); // Pin 11
+  servo1.attach(9);
+  servo2.attach(10);
+  servo3.attach(11);
+  servo4.attach(12);
+  servo5.attach(14);
+  servo6.attach(15);
 }
 
 void loop() {
-  // Move servos to different angles
-  moveServos(90, 120, 60, 90, 120, 60); // Example angles, adjust as needed
-  delay(1000); // Delay in milliseconds
-  moveServos(60, 90, 120, 60, 90, 120); // Example angles, adjust as needed
-  delay(1000); // Delay in milliseconds
+  moveServos(0, 30, 60, 90, 120, 150);
+  delay(2000); 
+
+  moveServos(150, 120, 90, 60, 30, 0);
+  delay(2000); 
 }
 
 void moveServos(int angle1, int angle2, int angle3, int angle4, int angle5, int angle6) {
